@@ -69,9 +69,14 @@ body {
   display: flex;
   align-items: center;
   padding: 10px;
+  justify-content: space-between;
   border-bottom: 1px solid #eee;
 }
-
+.profileinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .profile-pic {
   width: 40px;
   height: 40px;
@@ -98,12 +103,22 @@ body {
   margin-left: 2px;
 }
 
+.dots {
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dots span {
+  margin-bottom: 11px;
+}
 .user-id {
   color: #aaa;
 }
 
 .location {
-  color: #aaa;
+  color: rgb(102, 102, 102);
 }
 
 .main-img {
@@ -136,7 +151,7 @@ body {
   padding: 0px 10px 10px 10px;
   background: none;
   border: none;
-  color: #666;
+  color: black;
   font-size: 16px;
   cursor: pointer;
 }
