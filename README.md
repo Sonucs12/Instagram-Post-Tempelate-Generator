@@ -29,18 +29,8 @@ This repository contains a web application that allows users to customize and ge
 
 ## 📸 Preview
 
-![image](https://github.com/user-attachments/assets/8ee96335-b426-45c6-841a-b1a6c9265c30)
-
-## 🌟 How to Use
-
-1. Clone the repository:
-
-   git clone https://github.com/Sonucs12/instagram-post-template.git
-   cd instagram-post-template
-
-2. Open `index.html` in your browser.
-3. Customize your post using the provided form fields.
-4. Preview the template or download it as an image.
+![image](https://github.com/user-attachments/assets/7580249d-4494-4d38-b9ab-0e4f1be9083e)
+![image](https://github.com/user-attachments/assets/e7adcd15-e3b9-40f9-ab84-2648121681de)
 
 ## 📘 Usage
 
