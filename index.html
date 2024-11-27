@@ -16,7 +16,7 @@
       <div class="heading-container">
         <h1>Create Stunning Posts in Seconds!</h1>
         <p>Create templates like Instagram Post</p>
-        <button class="explore-button">Create Templates</button>
+        <a href="#explore" class="explore-button">Create Templates</a>
       </div>
       <div class="background-images">
         <img src="img1.png" alt="Template 1" class="img-style img1" />
@@ -26,16 +26,19 @@
         <img src="img5.png" alt="Template 5" class="img-style img5" />
       </div>
     </div>
+    <span id="explore"></span>
     <div class="container">
       <div id="border-wrapper">
         <div class="insta-post" id="borderclr">
           <div class="profile">
             <div class="profileinfo">
-              <img
-                class="profile-pic"
-                src="default-profile.jpg"
-                alt="Profile Pic"
-              />
+              <div class="profile-img">
+                <img
+                  class="profile-pic"
+                  src="default-profile.jpg"
+                  alt="Profile Pic"
+                />
+              </div>
               <div class="profile-info">
                 <span class="username"
                   >Username
@@ -56,7 +59,7 @@
                   </div>
                 </span>
                 <!-- <span class="user-id">@username</span> -->
-                <span class="location">Location</span>
+                <span class="location">Place</span>
               </div>
             </div>
             <div class="dots"><span>...</span></div>
@@ -162,7 +165,7 @@
           />
 
           <label for="profile-pic">Upload Profile Picture:</label>
-          <input type="file" id="profile-pic" accept="image/*" />
+          <input type="file" id="upload-profile-pic" accept="image/*" />
           <div id="error-message" style="color: red; display: none">
             Invalid file type. Please upload an image.
           </div>
@@ -172,16 +175,13 @@
             Invalid file type. Please upload an image.
           </div>
 
-          <label for="location">Location:</label>
+          <label for="location">Place:</label>
           <input
             type="text"
             id="location"
-            placeholder="Enter location"
-            maxlength="30"
-          />
-        </div>
-        <div class="section-two">
-          <label for="likes">Enter Likes Count:</label>
+            placeholder="Enter Place"
+            maxlength="35"
+          /><label for="likes">Enter Likes Count:</label>
           <input
             type="number"
             id="likes"
@@ -190,9 +190,15 @@
             max="10000"
             maxlength="6"
           />
+        </div>
+        <div class="section-two">
           <div class="check-box">
             <label for="show-verified">Verified Icon:</label>
-            <input type="checkbox" id="show-verified" checked />
+            <input type="checkbox" id="show-verified" />
+          </div>
+          <div class="check-box">
+            <label for="show-border">Add Border to Profile:</label>
+            <input type="checkbox" id="show-border" />
           </div>
           <label for="image-size">Select Image Size:</label>
           <select id="image-size">
@@ -223,7 +229,6 @@
       <div class="container">
         <p>© 2024 Sonu Kumar | All Rights Reserved</p>
         <div class="social-links">
-          <!-- LinkedIn Icon -->
           <a
             href="https://www.linkedin.com/in/sonu-kumar-15b6b3239/"
             target="_blank"
@@ -231,7 +236,7 @@
           >
             <i class="fab fa-linkedin"></i>
           </a>
-          <!-- GitHub Icon -->
+
           <a
             href="https://github.com/Sonucs12"
             target="_blank"
@@ -239,7 +244,7 @@
           >
             <i class="fab fa-github"></i>
           </a>
-          <!-- Portfolio Icon -->
+
           <a
             href="https://sonucs-portfolio.netlify.app/"
             target="_blank"

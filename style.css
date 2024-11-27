@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+:target {
+  scroll-margin-top: 5vh;
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -21,6 +25,9 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
@@ -76,13 +83,29 @@ body {
   align-items: center;
   justify-content: center;
 }
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.profile-img {
+  width: 47px;
   margin-right: 10px;
-}
+  height: 47px;
+  border-radius: 50%;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.border-add {
+  background: linear-gradient(45deg, #ff9900, #ff0099, #9900ff);
+  padding: 2px;
+}
+.white-borderadd {
+  border: 2px solid white;
+}
+.profile-pic {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -95,6 +118,7 @@ body {
 }
 .custom-svg {
   vertical-align: middle;
+  display: none;
 }
 
 .svgs {
@@ -189,7 +213,7 @@ body {
   border: 1px solid #1a1818;
   background-color: #6480bc25;
 }
-#profile-pic::-webkit-file-upload-button,
+#upload-profile-pic::-webkit-file-upload-button,
 #post-img::-webkit-file-upload-button {
   background-color: green;
   outline: none;
@@ -198,7 +222,7 @@ body {
   border-radius: 15px;
   color: wheat;
 }
-#profile-pic::-webkit-file-upload-button:hover,
+#upload-profile-pic::-webkit-file-upload-button:hover,
 #post-img::-webkit-file-upload-button:hover {
   background-color: rgba(8, 106, 8, 0.975);
   cursor: pointer;
@@ -215,6 +239,8 @@ input[type="file"] {
   border-radius: 10px;
   border: 1px solid #1a1818;
   background-color: #6e84b325;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 #image-size option {
   background-color: #6e84b325;
@@ -240,11 +266,9 @@ input[type="checkbox"] {
   outline: none;
   margin-right: 55px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
-#image-size {
-  margin-bottom: 15px;
-}
 .form-container button {
   width: 100%;
   padding: 10px;

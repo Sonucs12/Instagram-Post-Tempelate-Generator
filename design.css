@@ -34,14 +34,16 @@
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: #fff;
   cursor: pointer;
+  display: inline-block;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
-
-.explore-button:hover {
+.heading-container a {
+  text-decoration: none;
+}
+a.explore-button:hover {
   transform: scale(1.1);
 }
-
 .background-images {
   position: absolute;
   top: 0px;
@@ -247,5 +249,8 @@
   }
   .form-container button {
     font-size: 14px;
+  }
+  #show-border {
+    padding-left: 10px;
   }
 }

@@ -6,7 +6,7 @@ document.getElementById("username").addEventListener("input", function () {
 });
 
 document
-  .getElementById("profile-pic")
+  .getElementById("upload-profile-pic")
   .addEventListener("change", function (event) {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -24,6 +24,21 @@ document
 
     verifiedIcon.style.display = showVerified ? "inline" : "none";
   });
+document.getElementById("show-border").addEventListener("change", function () {
+  const showBorder = document.querySelector(".profile-pic");
+  const profileimg = document.querySelector(".profile-img");
+  const borderAdd = "border-add";
+  const whiteborderAdd = "white-borderadd";
+  const shownBorder = this.checked;
+
+  if (shownBorder) {
+    profileimg.classList.add(borderAdd);
+    showBorder.classList.add(whiteborderAdd);
+  } else {
+    profileimg.classList.remove(borderAdd);
+    showBorder.classList.remove(whiteborderAdd);
+  }
+});
 
 document
   .getElementById("post-img")
@@ -62,6 +77,7 @@ document
   .addEventListener("input", function () {
     const borderColor = this.value;
     document.querySelector(".insta-post").style.borderColor = borderColor;
+    this.style.backgroundColor = borderColor;
   });
 
 // Update the outer border width in real-time
@@ -79,7 +95,7 @@ document
 // Function to create a download link
 function createDownloadLink(canvas) {
   const link = document.createElement("a");
-  link.download = "custom-insta-post.png";
+  link.download = "instapost.png";
   link.href = canvas.toDataURL("image/png");
   link.click();
 }
