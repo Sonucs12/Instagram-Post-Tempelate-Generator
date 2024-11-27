@@ -33,7 +33,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  
 }
 
 .container {
@@ -286,40 +285,34 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
-/* Footer Styles */
 .footer {
-  background-color: #222; /* Dark background */
-  color: #fff; /* White text */
-  width: 100%; /* Ensure full width */
-  padding: 20px 0; /* Vertical padding */
-  text-align: center; 
-  margin-top: 100px;/* Center the text and icons */
-  
-  
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 100px;
 }
 
-/* Text styling */
 .footer p {
   margin: 10px 0;
   font-size: 16px;
 }
 
-/* Social links styling */
 .social-links {
   display: flex;
-  justify-content: center; /* Center icons horizontally */
-  gap: 15px; /* Spacing between icons */
+  justify-content: center;
+  gap: 15px;
   margin-bottom: 10px;
 }
 
 .icon {
-  color: #fff; /* Default white color */
-  font-size: 24px; /* Icon size */
+  color: #fff;
+  font-size: 24px;
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effects */
 .icon.linkedin:hover {
   color: #0e76a8;
   transform: scale(1.2);
