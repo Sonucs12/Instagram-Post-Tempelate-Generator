@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: purple;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+body {
+  background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+  z-index: -1;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column-reverse;
+}
+#border-wrapper {
+  display: flex;
+  width: 92%;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+
+  border-radius: 20px;
+  background-color: rgba(226, 225, 225, 0.336);
+}
+
+.insta-post {
+  max-width: 320px;
+  min-width: 320px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.189);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  border: 0px solid #000;
+  height: auto;
+  padding-bottom: 2px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+.custom-svg {
+  vertical-align: middle;
+}
+
+.svgs {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.user-id {
+  color: #aaa;
+}
+
+.location {
+  color: #aaa;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 3px;
+  justify-content: space-between;
+  padding: 10px 10px 5px 10px;
+  border-top: 1px solid #eee;
+}
+
+.actions button {
+  background: none;
+  border: none;
+
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+}
+.share-buttons .comment,
+.share {
+  margin-left: 5px;
+}
+.likes {
+  padding: 0px 10px 10px 10px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+}
+.actions button:hover {
+  color: #000;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding: 20px 40px 20px 40px;
+  justify-content: space-around;
+  background-color: rgba(226, 225, 225, 0.336);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.section-one,
+.section-two {
+  width: 50%;
+  padding: 20px;
+}
+.form-container label {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 3px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #1a1818;
+  background-color: #6480bc25;
+}
+#profile-pic::-webkit-file-upload-button,
+#post-img::-webkit-file-upload-button {
+  background-color: green;
+  outline: none;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 15px;
+  color: wheat;
+}
+#profile-pic::-webkit-file-upload-button:hover,
+#post-img::-webkit-file-upload-button:hover {
+  background-color: rgba(8, 106, 8, 0.975);
+  cursor: pointer;
+}
+input[type="file"] {
+  padding: 4px;
+  cursor: pointer;
+}
+
+#image-size {
+  padding: 3px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #1a1818;
+  background-color: #6e84b325;
+}
+#image-size option {
+  background-color: #6e84b325;
+}
+.form-container input::placeholder {
+  color: rgba(24, 23, 23, 0.92);
+}
+.form-container input:focus {
+  background-color: #c5b8b889;
+}
+.check-box {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.check-box::-webkit-check {
+  background-color: green;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  outline: none;
+  margin-right: 55px;
+  margin-bottom: 16px;
+}
+
+#image-size {
+  margin-bottom: 15px;
+}
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form-container button:hover,
+#show-preview:hover {
+  background-color: rgb(19, 130, 19);
+}
+#error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+#show-preview {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 10rem;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#previews {
+  height: auto;
+
+  align-items: center;
+  justify-content: center;
+}

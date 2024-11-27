@@ -1,0 +1,250 @@
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heading-container {
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.heading-container h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+.heading-container p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+
+.explore-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.explore-button:hover {
+  transform: scale(1.1);
+}
+
+.background-images {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.img-style {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.5));
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+.img1 {
+  top: 10%;
+  left: 20%;
+  transform: rotate(-15deg);
+}
+
+.img2 {
+  top: 50%;
+  left: 10%;
+  transform: rotate(10deg);
+}
+
+.img3 {
+  top: 30%;
+  left: 60%;
+  transform: rotate(-8deg);
+}
+
+.img4 {
+  top: 70%;
+  left: 40%;
+  transform: rotate(20deg);
+}
+
+.img5 {
+  top: 20%;
+  left: 80%;
+  transform: rotate(-25deg);
+}
+
+.img-style:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+
+@media (max-width: 769px) {
+  #border-wrapper {
+    width: 90%;
+    align-items: center;
+    margin-right: 0;
+  }
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .insta-post {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    border: 0px solid #000;
+  }
+
+  .form-container {
+    flex-direction: column;
+    display: flex;
+    gap: 0px;
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .section-one,
+  .section-two {
+    width: 100%;
+    padding: 20px;
+  }
+  .form-container label {
+    font-size: 15px;
+  }
+  #previews {
+    width: 90%;
+
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 325px) {
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+  .form-container {
+    width: 90%;
+    padding: 20px 10px 20px 10px;
+  }
+
+  .insta-post {
+    max-width: 270px;
+    min-width: 270px;
+  }
+  #previews {
+    max-width: 270px;
+    min-width: 270px;
+  }
+  .username {
+    font-size: 14px;
+  }
+
+  .user-id,
+  .location {
+    font-size: 12px;
+  }
+
+  .actions button {
+    font-size: 14px;
+  }
+
+  .form-container input {
+    padding: 5px;
+  }
+  #image-size {
+    font-size: 12px;
+  }
+  input[type="checkbox"] {
+    transform: scale(1);
+
+    margin-bottom: 12px;
+  }
+  .form-container button {
+    font-size: 14px;
+  }
+  .heading-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading-container p {
+    font-size: 0.9rem;
+  }
+
+  .explore-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .img-style {
+    width: 80px;
+    height: 80px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+  .form-container {
+    width: 90%;
+    padding: 20px 10px 20px 10px;
+  }
+
+  .insta-post {
+    max-width: 270px;
+    min-width: 270px;
+  }
+  #previews {
+    max-width: 270px;
+    min-width: 270px;
+  }
+  .username {
+    font-size: 14px;
+  }
+
+  .user-id,
+  .location {
+    font-size: 12px;
+  }
+
+  .actions button {
+    font-size: 14px;
+  }
+
+  .form-container input {
+    padding: 5px;
+  }
+  #image-size {
+    font-size: 12px;
+  }
+  input[type="checkbox"] {
+    transform: scale(1);
+
+    margin-bottom: 12px;
+  }
+  .form-container button {
+    font-size: 14px;
+  }
+}
