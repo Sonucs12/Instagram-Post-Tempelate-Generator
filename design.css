@@ -217,6 +217,28 @@ a.explore-button:hover {
   font-size: 15px;
 }
 
+/* download progress button */
+.button-fill {
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #0852c9;
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.button-fill.fill::before {
+  left: 0;
+}
 @media (max-width: 769px) {
   #border-wrapper {
     width: 90%;

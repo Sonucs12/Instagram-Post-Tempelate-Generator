@@ -132,15 +132,23 @@ function generateFinalCanvas(originalCanvas, borderColor, borderWidth) {
   finalCanvas.height = originalCanvas.height + borderWidth * 2;
   finalContext.fillStyle = borderColor;
   finalContext.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
+  finalContext.imageSmoothingQuality = "high";
   finalContext.drawImage(originalCanvas, borderWidth, borderWidth);
   return finalCanvas;
 }
 
 // Download button event listener
 document.getElementById("download").addEventListener("click", function () {
+  const downloadButton = this;
+  downloadButton.disabled = true;
+  downloadButton.textContent = "Downloading...";
+  downloadButton.classList.add("button-fill");
+  downloadButton.classList.add("fill");
+
   const postElement = document.querySelector(".insta-post");
   const selectedSize = document.getElementById("image-size").value;
   let targetWidth, targetHeight;
+
   if (selectedSize === "small") {
     targetWidth = 280;
     targetHeight = postElement.Height;
@@ -149,7 +157,7 @@ document.getElementById("download").addEventListener("click", function () {
     targetHeight = postElement.Height;
   } else if (selectedSize === "auto") {
     targetWidth = 320;
-    targetHeight = postElement.Height;
+    targetHeight = postElement.tHeight;
   }
 
   // Clone the element for capture to avoid modifying the original
@@ -158,9 +166,12 @@ document.getElementById("download").addEventListener("click", function () {
     document.getElementById("outer-border-color").value || "#000";
   const borderWidth =
     parseInt(document.getElementById("outer-border-width").value, 10) || 0;
+
   // Generate the original canvas
   generateOriginalCanvas(clone)
     .then((originalCanvas) => {
+      downloadButton.classList.remove("fill");
+
       // Generate the final canvas
       const finalCanvas = generateFinalCanvas(
         originalCanvas,
@@ -169,14 +180,29 @@ document.getElementById("download").addEventListener("click", function () {
       );
       createDownloadLink(finalCanvas);
       document.body.removeChild(clone);
+
+      // Update button to indicate download complete
+      downloadButton.textContent = "Download Complete!";
+      downloadButton.style.backgroundColor = "#4CAF50";
+
+      setTimeout(() => {
+        downloadButton.textContent = "Download Post";
+        downloadButton.disabled = false;
+        downloadButton.classList.remove("button-fill");
+        downloadButton.classList.remove("fill");
+        downloadButton.style.backgroundColor = "green";
+      }, 2000);
     })
     .catch((err) => {
       console.error("Error generating image:", err);
       alert("Image generation failed. Please try again.");
+      downloadButton.textContent = "Download Post";
+      downloadButton.disabled = false;
+      downloadButton.classList.remove("button-fill");
+      downloadButton.classList.remove("fill");
+      downloadButton.style.backgroundColor = "green";
     });
 });
-
-/// Preview button event listener
 document.getElementById("show-preview").addEventListener("click", function () {
   const postElement = document.querySelector(".insta-post");
   const selectedSize = document.getElementById("image-size").value;
