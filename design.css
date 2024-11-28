@@ -98,6 +98,125 @@ a.explore-button:hover {
   transform: scale(1.1) rotate(0deg);
 }
 
+/* check box */
+
+.checkbox-wrapper-10 .tgl {
+  display: none;
+}
+.checkbox-wrapper-10 .tgl,
+.checkbox-wrapper-10 .tgl:after,
+.checkbox-wrapper-10 .tgl:before,
+.checkbox-wrapper-10 .tgl *,
+.checkbox-wrapper-10 .tgl *:after,
+.checkbox-wrapper-10 .tgl *:before,
+.checkbox-wrapper-10 .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.checkbox-wrapper-10 .tgl::-moz-selection,
+.checkbox-wrapper-10 .tgl:after::-moz-selection,
+.checkbox-wrapper-10 .tgl:before::-moz-selection,
+.checkbox-wrapper-10 .tgl *::-moz-selection,
+.checkbox-wrapper-10 .tgl *:after::-moz-selection,
+.checkbox-wrapper-10 .tgl *:before::-moz-selection,
+.checkbox-wrapper-10 .tgl + .tgl-btn::-moz-selection,
+.checkbox-wrapper-10 .tgl::selection,
+.checkbox-wrapper-10 .tgl:after::selection,
+.checkbox-wrapper-10 .tgl:before::selection,
+.checkbox-wrapper-10 .tgl *::selection,
+.checkbox-wrapper-10 .tgl *:after::selection,
+.checkbox-wrapper-10 .tgl *:before::selection,
+.checkbox-wrapper-10 .tgl + .tgl-btn::selection {
+  background: none;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 1.5em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn:after,
+.checkbox-wrapper-10 .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn:after {
+  left: 0;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn:before {
+  display: none;
+}
+.checkbox-wrapper-10 .tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn {
+  padding: 2px;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  perspective: 100px;
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:after,
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+ 
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+  content: attr(data-tg-on);
+  background: #02c66f;
+  transform: rotateY(-180deg);
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+  background: #ff3a19;
+  content: attr(data-tg-off);
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:active:before {
+  transform: rotateY(-20deg);
+}
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:before {
+  transform: rotateY(180deg);
+}
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:after {
+  transform: rotateY(0);
+  left: 0;
+  background: #7fc6a6;
+}
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:active:after {
+  transform: rotateY(20deg);
+}
+
+.tgl-btn::before {
+  content: attr(data-tg-off);
+  font-size: 15px;
+}
+
+.tgl:checked + .tgl-btn::before {
+  content: attr(data-tg-on);
+  font-size: 15px;
+}
+
 @media (max-width: 769px) {
   #border-wrapper {
     width: 90%;
@@ -142,49 +261,17 @@ a.explore-button:hover {
 
 @media (max-width: 325px) {
   .profile-pic {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
-  .form-container {
-    width: 90%;
-    padding: 20px 10px 20px 10px;
-  }
-
-  .insta-post {
-    max-width: 270px;
-    min-width: 270px;
-  }
-  #previews {
-    max-width: 270px;
-    min-width: 270px;
-  }
-  .username {
-    font-size: 14px;
-  }
-
-  .user-id,
-  .location {
-    font-size: 12px;
-  }
-
-  .actions button {
-    font-size: 14px;
-  }
-
-  .form-container input {
-    padding: 5px;
-  }
-  #image-size {
-    font-size: 12px;
-  }
+ 
+  
   input[type="checkbox"] {
     transform: scale(1);
 
     margin-bottom: 12px;
   }
-  .form-container button {
-    font-size: 14px;
-  }
+ 
   .heading-container h1 {
     font-size: 1.5rem;
   }
@@ -206,10 +293,7 @@ a.explore-button:hover {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
-  .profile-pic {
-    width: 30px;
-    height: 30px;
-  }
+  
   .form-container {
     width: 90%;
     padding: 20px 10px 20px 10px;
@@ -242,15 +326,16 @@ a.explore-button:hover {
   #image-size {
     font-size: 12px;
   }
-  input[type="checkbox"] {
-    transform: scale(1);
-
-    margin-bottom: 12px;
-  }
+ 
   .form-container button {
     font-size: 14px;
   }
   #show-border {
     padding-left: 10px;
+  }
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  ;
   }
 }

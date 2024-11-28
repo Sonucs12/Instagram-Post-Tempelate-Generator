@@ -156,32 +156,32 @@
       <!-- Form to fill details -->
       <div class="form-container">
         <div class="section-one">
-          <label for="username">Username:</label>
+          <label for="username">Enter Name</label>
           <input
             type="text"
             id="username"
-            placeholder="Enter username"
+            placeholder="Enter name"
             maxlength="20"
           />
 
-          <label for="profile-pic">Upload Profile Picture:</label>
+          <label for="profile-pic">Upload Profile Picture</label>
           <input type="file" id="upload-profile-pic" accept="image/*" />
           <div id="error-message" style="color: red; display: none">
             Invalid file type. Please upload an image.
           </div>
-          <label for="post-img">Upload Post Image:</label>
+          <label for="post-img">Upload Post Image</label>
           <input type="file" id="post-img" accept="image/*" />
           <div id="error-message" style="color: red; display: none">
             Invalid file type. Please upload an image.
           </div>
 
-          <label for="location">Place:</label>
+          <label for="location">Place</label>
           <input
             type="text"
             id="location"
             placeholder="Enter Place"
-            maxlength="35"
-          /><label for="likes">Enter Likes Count:</label>
+            maxlength="30"
+          /><label for="likes">Enter Likes Count</label>
           <input
             type="number"
             id="likes"
@@ -193,28 +193,46 @@
         </div>
         <div class="section-two">
           <div class="check-box">
-            <label for="show-verified">Verified Icon:</label>
-            <input type="checkbox" id="show-verified" />
+            <label for="show-verified">Verified Icon</label>
+            <div class="checkbox-wrapper-10">
+              <input class="tgl tgl-flip" id="show-verified" type="checkbox" />
+              <label
+                class="tgl-btn"
+                data-tg-off="Nope"
+                data-tg-on="Yeah!"
+                for="show-verified"
+              ></label>
+            </div>
           </div>
+
           <div class="check-box">
-            <label for="show-border">Add Border to Profile:</label>
-            <input type="checkbox" id="show-border" />
+            <label for="show-border">Add Border to Profile</label>
+            <!-- <input type="checkbox" id="show-border" /> -->
+            <div class="checkbox-wrapper-10">
+              <input class="tgl tgl-flip" id="show-border" type="checkbox" />
+              <label
+                class="tgl-btn"
+                data-tg-off="Nope"
+                data-tg-on="Yeah!"
+                for="show-border"
+              ></label>
+            </div>
           </div>
-          <label for="image-size">Select Image Size:</label>
+          <label for="image-size">Select Image Size</label>
           <select id="image-size">
             <option value="auto">Auto (recommend)</option>
-            <option value="small">Small (350x350)</option>
-            <option value="medium">Medium (600x600)</option></select
+            <option value="small">Small</option>
+            <option value="medium">Large</option></select
           ><br />
-          <label for="outer-border-color">Border Color:</label>
+          <label for="outer-border-color">Border Color</label>
           <input type="color" id="outer-border-color" value="#000000" />
 
-          <label for="outer-border-width">Border Width (px):</label>
+          <label for="outer-border-width">Border Width <span id="show-px">(px)</span></label>
           <input
-            type="number"
+            type="range"
             id="outer-border-width"
             value="0"
-            max="10"
+            max="20"
             min="0"
           />
 
