@@ -173,7 +173,7 @@ a.explore-button:hover {
   width: 100%;
   text-align: center;
   position: absolute;
- 
+
   font-weight: bold;
   color: #fff;
   position: absolute;
@@ -264,14 +264,13 @@ a.explore-button:hover {
     width: 35px;
     height: 35px;
   }
- 
-  
+
   input[type="checkbox"] {
     transform: scale(1);
 
     margin-bottom: 12px;
   }
- 
+
   .heading-container h1 {
     font-size: 1.5rem;
   }
@@ -293,7 +292,7 @@ a.explore-button:hover {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
-  
+
   .form-container {
     width: 90%;
     padding: 20px 10px 20px 10px;
@@ -326,7 +325,7 @@ a.explore-button:hover {
   #image-size {
     font-size: 12px;
   }
- 
+
   .form-container button {
     font-size: 14px;
   }
@@ -336,6 +335,5 @@ a.explore-button:hover {
   .profile-img {
     width: 40px;
     height: 40px;
-  ;
   }
 }

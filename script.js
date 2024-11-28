@@ -90,11 +90,11 @@ document
     }
     const borderWidth = this.value + "px";
     document.querySelector(".insta-post").style.borderWidth = borderWidth;
-  
+
     if (this.value === "0") {
       document.querySelector("#show-px").innerText = "(px)"; // Show nothing if value is 0
     } else {
-      document.querySelector("#show-px").innerText = "(" +borderWidth + ")"; 
+      document.querySelector("#show-px").innerText = "(" + borderWidth + ")";
     }
   });
 
