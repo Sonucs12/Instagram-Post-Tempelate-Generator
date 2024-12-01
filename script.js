@@ -70,7 +70,6 @@ document.getElementById("likes").addEventListener("input", function () {
   const formattedLikes = likesCount.toLocaleString();
   document.querySelector(".likes").textContent = formattedLikes + " Likes";
 });
-
 // Update the outer border color in real-time
 document
   .getElementById("outer-border-color")
